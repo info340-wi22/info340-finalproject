@@ -9,7 +9,6 @@ a:hover {
 main {
     background-color: #2d323f;
     color: white;
-    height: 64.45vh;
     border-bottom: 2px solid white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -71,7 +70,7 @@ div>label, .form-check {
 }
 
 .form-control {
-    max-width: 6vh;
+    max-width: 10vh;
 }
 
 /* date picker */
@@ -84,7 +83,59 @@ div>label, .form-check {
     background-color: black;
     color: white;
     margin-top: 0;
+    position: absolute;
+    width: 100%;
 }
+
+/* Float four columns side by side */
+  .column {
+    display: flex;
+    flex: 1;
+    padding: 0 10px;
+  }
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    display: flex;
+  }
+
+/* Style the counter cards */
+.card {
+    flex: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #2d323f;
+    border-style: solid;
+    border-color: white;
+  }
+
+  .viz {
+    height: 45vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .check-in-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+  }
+
+  .check-in-button:hover {
+    transition-duration: 0.2s;
+    background-color:coral;
+  }
 
 /* styling changes as screen size changes based off rules defined below */
 @media (min-width: 576px) {}

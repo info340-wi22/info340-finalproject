@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary</title>
+  <link rel="icon" type="image/png" href="img/leaf-fav.png">
+    <!-- leaf favicon source: https://pngtree.com/freepng/human-leaf-logo-design-human-character-figure-on-green-leaf-ecology-and-bio-product-creative-sign-nature-symbol_5176856.html -->
+
+    <!-- normalize.css for cross-browser stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+    <!-- required frameworks/fonts and css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand justify-content-center">
+      <!-- navbar links -->
+      <ul class="navbar-nav justify-content-center">
+          <li class="nav-item">
+              <a class="nav-link" href="#">Overview</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Check-in</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="summarydisp1.html">Summary</a>
+          </li>
+      </ul>
+    </nav>
+    <div class="jumbo-bg jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="container">
+            <h1>Summary</h1>
+        </div>
+
+
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Today's Summary</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>Sleep</h3>
+            <p>Today you had <b>8 hours</b> of sleep.</p>
+            <p>At your age of 20, it is recommended to sleep <b>7-9 hours</b>.
+              Good Job! Today you've slept enough.</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <h3>Workout</h3>
+            <p>Today you did <b>1 hour</b> of physical activity.</p>
+            <p>It is recommended for everyone to include at least <b>30 minutes</b> of vigorous
+              aerobic activity that build strong muscles and bones daily.
+              Good Job! Today you've workout enough.
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <h3>Satisfaction</h3>
+            <p>You are satisfied with your day.</p>
+            <p>You should be! Really good job today. Keep it up!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Weekly Summary</h2>
+      <img class="viz" src="./img/graph.png" alt="sample viz">
+    </section>
+  </main>
+  <footer>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">&copy; 2022 Copyright:
+        <a href="https://github.com/info340-wi22/INFO340-finalproject"> The Zesty Zeniths</a>
+    </div>
+  </footer>
+</body>
+</html>
