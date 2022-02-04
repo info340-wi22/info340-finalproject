@@ -1,10 +1,14 @@
 /* styling for links */
-a {
-    color: #65a1e1;
-}
 a:hover {
-    color: #007bff;
+    color: #2f384d;
+    text-decoration: inherit;
 }
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+
 /* sets mains bg color to a blueish gray and fonts to white, and set bottom border of main to fit accent */
 main {
     background-color: #2d323f;
@@ -12,19 +16,35 @@ main {
     border-bottom: 2px solid white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+/* added 1rem padding to top of h2 */
+h2 {
+    padding: 1rem;
+    padding-top: 2rem;
+}
+/* added padding around images and curved corners */
+img {
+    padding: 1.5rem;
+    border-radius: 65px;
+}
 /* set navbar color and bottom border */
 nav {
     background-color: #000000;
     border-bottom: 1px solid white;
 }
-
+/* img attribution styling */
+.src {
+    color: #5f6470;
+}
+.src:hover {
+    color: #567cd6;
+}
 /* set jumbotron background image/removed margin */
 .jumbo-bg {
     background-image: url('../img/triangle-bg.png');
     /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
     background-position: center;
     background-size: cover;
+    max-height: 263px;
 }
 
 .jumbotron {
@@ -53,7 +73,6 @@ form {
 div>label, .form-check {
     margin-top: 2rem;
     margin-bottom: 1rem;
-
 }
 
 .missed-day-link {
@@ -67,8 +86,14 @@ div>label, .form-check {
     margin-top: 1rem;
     background-color: black;
     border-color: white;
+    margin-bottom: 1.5rem;
 }
 
+.yesno-btn {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
 .form-control {
     max-width: 10vh;
 }
@@ -88,16 +113,17 @@ div>label, .form-check {
 }
 
 /* Float four columns side by side */
-  .column {
+.column {
     display: flex;
     flex: 1;
     padding: 0 10px;
-  }
+}
 
 /* Remove extra left and right margins, due to padding */
 .row {
     display: flex;
-  }
+
+}
 
 /* Style the counter cards */
 .card {
@@ -108,34 +134,40 @@ div>label, .form-check {
     background-color: #2d323f;
     border-style: solid;
     border-color: white;
-  }
+}
 
-  .viz {
+.viz {
     height: 45vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
-  .check-in-button {
+.check-in-button {
     background-color: #4CAF50;
-    border: none;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
-    margin: auto;
     display: block;
-  }
+}
 
-  .check-in-button:hover {
+.check-in-button:hover {
     transition-duration: 0.2s;
-    background-color:coral;
-  }
+    background-color: coral;
+}
+
+.goal {
+    padding: 10px;
+    gap: 10px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(20, 20, 20, 0.16);
+}
+
+.goal-content {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* styling changes as screen size changes based off rules defined below */
 @media (min-width: 576px) {}

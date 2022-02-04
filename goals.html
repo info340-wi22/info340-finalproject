@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Goals</title>
+    <meta name="author" content="The Zesty Zeniths: Parsa, Bryan, and John">
+    <meta name="description" content="A web app named WorkWell created for the INFO 340 class at the University of Washington. Aim is to inspire productivity and accountability in everyday wellbeing">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/leaf-fav.png">
+    <!-- leaf favicon source: https://pngtree.com/freepng/human-leaf-logo-design-human-character-figure-on-green-leaf-ecology-and-bio-product-creative-sign-nature-symbol_5176856.html -->
 
-    <link rel="stylesheet" href="css/goal-style.css">
+    <!-- normalize.css for cross-browser stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+    <!-- required frameworks/fonts and css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand justify-content-center">
+    <header>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand justify-content-center">
         <!-- navbar links -->
         <ul class="navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Overview</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goals2.html">Goals</a>
+        </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Overview</a>
+                <a class="nav-link" href="check-in.html">Check-in</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Check-in</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Summary</a>
+                <a class="nav-link" href="summary.html">Summary</a>
             </li>
         </ul>
     </nav>
-    <div class="jumbo-bg jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="jumbo-bg jumbotron jumbotron-fluid bg-dark text-white">
 
-        <div class="container">
-            <h1>Today's Goals</h1>
-            <h5>Today's date is 02/03/22</h4>
-                <!-- static for now ^ will use JS to make automated for final -->
-                <p class="lead">See what your goals are for today</p>
+            <div class="container">
+                <h1>Goal Tracker</h1>
+                <h5>Today's date is 02/03/22</h4>
+                    <!-- static for now ^ will use JS to make automated for final -->
+                    <p class="lead">Have you been meeting your goals? </p>
+            </div>
         </div>
-    </div>
+    </header>
 
     <main>
         <div class="goal-container">
@@ -41,43 +56,45 @@
                 <div class="goal-type">
                     <span class="material-icons-outlined">fitness_center</span>
                 </div>
-                <div class="goal-content">               
+                <div class="goal-content">
                     <h2 class="goal-title">Push Up</h2>
                     <p class="card-text">Have you completed 100 push ups?</p>
                     <div class="button">
-                        <button type="button">YES</button> 
-                        <button type="button">NO</button>
+                        <button class="yesno-btn" type="button">YES</button>
+                        <button class="yesno-btn" type="button">NO</button>
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="goal">
                 <div class="goal-type">
                     <span class="material-icons-outlined">water_drop</span>
                 </div>
-                <div class="goal-content">               
+                <div class="goal-content">
                     <h2 class="goal-title">Drink Water</h2>
                     <p class="card-text">Have you drank 60z of water?</p>
                     <div class="button">
-                        <button type="button">YES</button> 
-                        <button type="button">NO</button>
+                        <button class="yesno-btn" type="button">YES</button>
+                        <button class="yesno-btn" type="button">NO</button>
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="goal">
                 <div class="goal-type">
                     <span class="material-icons-outlined">bed</span>
                 </div>
-                <div class="goal-content">               
+                <div class="goal-content">
                     <h2 class="goal-title">Sleep</h2>
                     <p class="card-text">Have you rested for 8 hours?</p>
                     <div class="button">
-                        <button type="button">YES</button> 
-                        <button type="button">NO</button>
+                        <button class="yesno-btn" type="button">YES</button>
+                        <button class="yesno-btn" type="button">NO</button>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
-        
+        <div class="row d-flex justify-content-center align-content-center"> 
+            <button class="btn btn-primary" href="index.html"> Submit </button>
+          </div>
     </main>
     <footer>
         <!-- Copyright -->
@@ -86,4 +103,5 @@
         </div>
     </footer>
 </body>
+
 </html>
