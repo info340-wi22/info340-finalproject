@@ -1,0 +1,89 @@
+/* sets mains bg color to a blueish gray and fonts to white, and set bottom border of main to fit accent */
+main {
+    background-color: #2d323f;
+    color: white;
+    height: 64.45vh;
+    border-bottom: 2px solid white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* set navbar color and bottom border */
+nav {
+    background-color: #000000;
+    border-bottom: 1px solid white;
+}
+
+/* set jumbotron background image/removed margin */
+.jumbo-bg {
+    background-image: url('../img/triangle-bg.png');
+    /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
+    background-position: center;
+    background-size: cover;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    border-bottom: 1px solid white;
+}
+
+/* styling for navbar links */
+.nav-link {
+    color: whitesmoke;
+    text-shadow: 1px 1px 0.1px rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-link:hover {
+    color: white;
+    text-shadow: 1px 1px 0.1px #566177;
+}
+
+/* styling for form */
+form {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+div>label, .form-check {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.missed-day-link {
+    padding-left: 0;
+    margin-top: 1rem;
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn {
+    margin-top: 1rem;
+    background-color: black;
+    border-color: white;
+}
+
+.form-control {
+    max-width: 6vh;
+}
+
+/* date picker */
+.input-group {
+    padding-top: 2rem;
+}
+
+/* styling for footer */
+.footer-copyright {
+    background-color: black;
+    color: white;
+    margin-top: 0;
+}
+
+/* styling changes as screen size changes based off rules defined below */
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
