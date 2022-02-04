@@ -5,9 +5,11 @@ a:hover {
 }
 
 a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
-  }
+    color: inherit;
+    /* blue colors for links too */
+    text-decoration: inherit;
+    /* no underline */
+}
 
 /* sets mains bg color to a blueish gray and fonts to white, and set bottom border of main to fit accent */
 main {
@@ -16,28 +18,36 @@ main {
     border-bottom: 2px solid white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 /* added 1rem padding to top of h2 */
 h2 {
     padding: 1rem;
     padding-top: 2rem;
 }
+
 /* added padding around images and curved corners */
 img {
     padding: 1.5rem;
     border-radius: 65px;
 }
+
 /* set navbar color and bottom border */
 nav {
     background-color: #000000;
     border-bottom: 1px solid white;
 }
+
 /* img attribution styling */
 .src {
     color: #5f6470;
+    font-size: 8px;
 }
+
 .src:hover {
     color: #567cd6;
+    font-size: 16px;
 }
+
 /* set jumbotron background image/removed margin */
 .jumbo-bg {
     background-image: url('../img/triangle-bg.png');
@@ -94,6 +104,7 @@ div>label, .form-check {
     color: white;
     border-color: white;
 }
+
 .form-control {
     max-width: 10vh;
 }
