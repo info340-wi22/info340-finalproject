@@ -11,11 +11,18 @@ a {
     /* no underline */
 }
 
+.card-link:hover {
+    color: antiquewhite;
+  }
+
 /* sets mains bg color to a blueish gray and fonts to white, and set bottom border of main to fit accent */
-main {
+main{
     background-color: #2d323f;
-    color: white;
     border-bottom: 2px solid white;
+}
+
+main, table {
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -179,6 +186,21 @@ div>label, .form-check {
     display: flex;
     justify-content: space-between;
 }
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1em;
+  }
 
 /* styling changes as screen size changes based off rules defined below */
 @media (min-width: 576px) {}
