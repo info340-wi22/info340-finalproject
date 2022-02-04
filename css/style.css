@@ -1,3 +1,10 @@
+/* styling for links */
+a {
+    color: #65a1e1;
+}
+a:hover {
+    color: #007bff;
+}
 /* sets mains bg color to a blueish gray and fonts to white, and set bottom border of main to fit accent */
 main {
     background-color: #2d323f;
