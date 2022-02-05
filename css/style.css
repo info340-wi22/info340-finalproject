@@ -113,19 +113,6 @@ div > label, .form-check {
     padding-top: 2rem;
 }
 
-/* set jumbotron background image/removed margin */
-.jumbo-bg {
-    background-image: url('../img/triangle-bg.png');
-    /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-}
-
-.motto {
-    font-size: 0.6em;
-}
-
 /* styling for footer */
 .footer-copyright {
     background-color: black;
@@ -165,13 +152,6 @@ div > label, .form-check {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.fit-picture {
-    height: 12vh;
-    float: left;
-    left: 0px;
-    bottom: 5vh;
 }
 
 .check-in-button {
@@ -226,15 +206,50 @@ td, th {
 				-1px -1px 0 #566177;
   }
 
+.sustainability-pledge {
+    display: none;
+}
+
 /* styling changes as screen size changes based off rules defined below */
 @media (min-width: 576px) {
+    /* set jumbotron background image/removed margin */
+    .jumbo-bg {
+        background-image: url('../img/triangle-bg.png');
+        /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) {
+    .sustainability-pledge{
+        display: block;
+    }
+
+    .motto {
+        font-size: 0.8em;
+    }
+
+    .fit-picture {
+        height: 12vh;
+        float: fixed;
+        left: 0px;
+        bottom: 20px;
+    }
 }
 
 @media (min-width: 992px) {
+    .viz {
+        height: 50vh;
+    }
 }
 
 @media (min-width: 1200px) {
+    .motto {
+        font-size: 1.2em;
+    }
+    .fit-picture {
+        height: 18vh;
+    }
 }
