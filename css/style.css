@@ -46,6 +46,7 @@ nav {
 
 /* img attribution styling */
 .src {
+    display: none;
     color: #5f6470;
     font-size: 8px;
 }
@@ -53,15 +54,6 @@ nav {
 .src:hover {
     color: #567cd6;
     font-size: 16px;
-}
-
-/* set jumbotron background image/removed margin */
-.jumbo-bg {
-    background-image: url('../img/triangle-bg.png');
-    /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
-    background-position: center;
-    background-size: cover;
-    max-height: 263px;
 }
 
 .jumbotron {
@@ -124,6 +116,7 @@ div>label, .form-check {
 
 /* styling for footer */
 .footer-copyright {
+    display: none;
     background-color: black;
     color: white;
     margin-top: 0;
@@ -139,7 +132,7 @@ div>label, .form-check {
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {
+.rows {
     display: flex;
 
 }
@@ -175,6 +168,7 @@ div>label, .form-check {
     background-color: coral;
 }
 
+/* Styling for the goal cards */
 .goal {
     padding: 10px;
     gap: 10px;
@@ -213,12 +207,46 @@ td, th {
   }
 /* styling changes as screen size changes based off rules defined below */
 
-@media (min-width: 576px) {}
-/* modify this for small devices */
-@media (min-width: 768px) {
-    
+.sustainability-pledge {
+    display: none;
 }
 
-@media (min-width: 992px) {}
+.viz {
+    display: none;
+}
 
-@media (min-width: 1200px) {}
+@media (min-width: 576px) {
+    /* set jumbotron background image/removed margin */
+    .jumbo-bg {
+        background-image: url('../img/triangle-bg.png');
+        /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
+        background-position: center;
+        background-size: cover;
+        max-height: 263px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-copyright{
+        display: block;
+    }
+
+    .viz {
+        display: flex;
+    }
+
+    .src{
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .sustainability-pledge {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    
+}
