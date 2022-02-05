@@ -95,6 +95,7 @@ div>label, .form-check {
 .missed-day-link {
     padding-left: 0;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     font-size: 11px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -186,7 +187,7 @@ div>label, .form-check {
     display: flex;
     justify-content: space-between;
 }
-
+/* table styling */
 table {
     border-collapse: collapse;
     width: 80%;
@@ -201,11 +202,22 @@ td, th {
     text-align: left;
     padding: 1em;
   }
-
+/* click-here prompt styling */
+  .click-here {
+      font-size: 12px;
+      color: #ffffff;
+      text-shadow: -1px 1px 0 #566177,
+				  1px 1px 0 #566177,
+				 1px -1px 0 #566177,
+				-1px -1px 0 #566177;
+  }
 /* styling changes as screen size changes based off rules defined below */
-@media (min-width: 576px) {}
 
-@media (min-width: 768px) {}
+@media (min-width: 576px) {}
+/* modify this for small devices */
+@media (min-width: 768px) {
+    
+}
 
 @media (min-width: 992px) {}
 
