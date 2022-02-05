@@ -46,7 +46,6 @@ nav {
 
 /* img attribution styling */
 .src {
-    display: none;
     color: #5f6470;
     font-size: 8px;
 }
@@ -79,7 +78,7 @@ form {
     margin-right: 1.5rem;
 }
 
-div>label, .form-check {
+div > label, .form-check {
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -114,9 +113,21 @@ div>label, .form-check {
     padding-top: 2rem;
 }
 
+/* set jumbotron background image/removed margin */
+.jumbo-bg {
+    background-image: url('../img/triangle-bg.png');
+    /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.motto {
+    font-size: 0.6em;
+}
+
 /* styling for footer */
 .footer-copyright {
-    display: none;
     background-color: black;
     color: white;
     margin-top: 0;
@@ -132,9 +143,10 @@ div>label, .form-check {
 }
 
 /* Remove extra left and right margins, due to padding */
-.rows {
+.row {
     display: flex;
-
+    margin-right: 0;
+    margin-left: 0;
 }
 
 /* Style the counter cards */
@@ -149,10 +161,17 @@ div>label, .form-check {
 }
 
 .viz {
-    height: 45vh;
+    height: 35vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.fit-picture {
+    height: 12vh;
+    float: left;
+    left: 0px;
+    bottom: 5vh;
 }
 
 .check-in-button {
@@ -196,6 +215,7 @@ td, th {
     text-align: left;
     padding: 1em;
   }
+
 /* click-here prompt styling */
   .click-here {
       font-size: 12px;
@@ -205,48 +225,16 @@ td, th {
 				 1px -1px 0 #566177,
 				-1px -1px 0 #566177;
   }
+
 /* styling changes as screen size changes based off rules defined below */
-
-.sustainability-pledge {
-    display: none;
-}
-
-.viz {
-    display: none;
-}
-
 @media (min-width: 576px) {
-    /* set jumbotron background image/removed margin */
-    .jumbo-bg {
-        background-image: url('../img/triangle-bg.png');
-        /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
-        background-position: center;
-        background-size: cover;
-        max-height: 263px;
-    }
 }
 
 @media (min-width: 768px) {
-    .footer-copyright{
-        display: block;
-    }
-
-    .viz {
-        display: flex;
-    }
-
-    .src{
-        display: block;
-    }
 }
 
 @media (min-width: 992px) {
-    .sustainability-pledge {
-        display: block;
-    }
-
 }
 
 @media (min-width: 1200px) {
-    
 }
