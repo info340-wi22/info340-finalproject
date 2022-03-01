@@ -7,5 +7,10 @@ import './index.css';
 
 import App from './App';
 
+const goalsArray = [
+    { type: "fitness_center", title: "Push Up", desc: "Have you completed 100 push ups?" },
+    { type: "water_drop", title: "Drink Water", desc: "Have you drank 60oz of water?" },
+    { type: "bed", title: "Sleep", desc: "Have you rested for 8 hours?"}
+]
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter><App data={goalsArray}/></BrowserRouter>, document.getElementById('root'));
