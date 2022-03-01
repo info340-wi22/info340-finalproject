@@ -104,6 +104,9 @@ div > label, .form-check {
   border-color: white;
 }
 
+.submit-btn {
+  margin-top: 2rem;
+}
 .form-control {
   max-width: 10vh;
 }
