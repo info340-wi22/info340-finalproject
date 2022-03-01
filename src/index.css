@@ -176,6 +176,16 @@ div > label, .form-check {
   box-shadow: 5px 5px rgba(20, 20, 20, 0.16);
 }
 
+.goal-complete {
+  padding: 10px;
+  gap: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(20, 20, 20, 0.16);
+  background-color: #4CAF50;
+}
+
+
 .goal-content {
   display: flex;
   justify-content: space-between;
