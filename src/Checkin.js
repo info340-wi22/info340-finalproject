@@ -50,7 +50,7 @@ export function CheckinMain() {
                         <option>10</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="submit-btn btn btn-primary">Submit</button>
                 <br />
             </form>
             <a class="missed-day-link" href="missed-day.html">Missed a day?</a>
