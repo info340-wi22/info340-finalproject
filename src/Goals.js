@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+// Our apps interactivity for the REACT draft can be found below
 export function GoalHeader() {
     return (
         <div className="jumbo-bg jumbotron jumbotron-fluid bg-dark text-white">
