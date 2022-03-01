@@ -25,8 +25,9 @@ function GoalCard(props) {
     }
 
     return (
-        <div className="goal">
+        <div className={status ? "goal-complete":"goal"}>
             <div className="goal-type">
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"></link>
                 <span className="material-icons-outlined">{props.goal.type}</span>
             </div>
             <div className="goal-content">
