@@ -20,3 +20,13 @@ export function Header() {
     </nav>
   );
 }
+
+export function Footer() {
+  return (
+    <footer>
+        <div className="footer-copyright text-center py-3">&copy; 2022 Copyright:
+          <a href="https://github.com/info340-wi22/INFO340-finalproject"> The Zesty Zeniths</a>
+        </div>
+      </footer>
+  );
+}

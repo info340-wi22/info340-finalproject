@@ -1,24 +1,31 @@
 import React from 'react';
 
-export function CheckinHeader() {
+export function MissedCheckinHeader() {
     return (
         <div className="jumbo-bg jumbotron jumbotron-fluid bg-dark text-white">
+
             <div className="container">
-                <h1>Daily Check-in</h1>
-                <p className="h5">Today's date is 02/03/22</p>
+                <h1>Missed a Day?</h1>
+                <p className="h5">Choose the appropriate date</p>
                 {/* <!-- static for now ^ will use JS to make automated for final --> */}
-                <p className="lead">Please answer the below to complete your daily check-in.</p>
+                <p className="lead">After answering below, click submit to update your information for the chosen day.
+                </p>
             </div>
         </div>
     );
 }
 
-export function CheckinMain() {
+export function MissedCheckinMain() {
     return (
         <main>
             <form>
+                <div className="form-group" id="datepicker">
+                    <label htmlFor="WorkoutLabel">What day did you miss and want to correct?</label>
+                    <div><input className="date-picker" type="date" id="WorkoutLabel" name="workout-date" /></div>
+                </div>
+
                 <div className="form-group">
-                    <label for="WorkoutSelect">How many hours did you workout today?</label>
+                    <label htmlFor="WorkoutLabel">How many hours did you workout today?</label>
                     <select className="form-control" id="WorkoutSelect">
                         <option>1</option>
                         <option>2</option>
@@ -35,7 +42,7 @@ export function CheckinMain() {
                     </select>
                 </div>
                 <div className="form-group">
-                    <label for="HappinessSelect">What would you rate your level of happiness and satisfaction at today?
+                    <label htmlFor="HappinessLabel">What would you rate your level of happiness and satisfaction at today?
                         <br />(zero being the worst, and ten as the best)</label>
                     <select className="form-control" id="HappinessSelect">
                         <option>1</option>
@@ -50,12 +57,9 @@ export function CheckinMain() {
                         <option>10</option>
                     </select>
                 </div>
-                <button type="submit" className="submit-btn btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Submit</button>
                 <br />
             </form>
-            <a className="missed-day-link" href="/missed-check-in">Missed a day?</a>
-            <p></p>
         </main>
     );
 }
-
