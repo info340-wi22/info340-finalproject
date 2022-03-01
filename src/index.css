@@ -46,6 +46,7 @@ nav {
 
 /* img attribution styling */
 .src {
+  padding-left: 2rem;
   color: #5f6470;
   font-size: 8px;
 }
