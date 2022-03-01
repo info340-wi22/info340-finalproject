@@ -56,6 +56,8 @@ nav {
 }
 
 .jumbotron {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   margin-bottom: 0px;
   border-bottom: 1px solid white;
 }
@@ -223,6 +225,13 @@ td, th {
   display: none;
 }
 
+.motto {
+  font-size: 0.3rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
 /* styling changes as screen size changes based off rules defined below */
 @media (min-width: 576px) {
   /* set jumbotron background image/removed margin */
@@ -241,7 +250,7 @@ td, th {
   }
 
   .motto {
-      font-size: 0.8em;
+      font-size: 0.8rem;
   }
 
   .fit-picture {
@@ -260,9 +269,10 @@ td, th {
 
 @media (min-width: 1200px) {
   .motto {
-      font-size: 1.2em;
+      font-size: 1rem;
   }
   .fit-picture {
-      height: 18vh;
+      height: 15vh;
   }
 }
+

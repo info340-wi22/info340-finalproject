@@ -7,6 +7,7 @@ import { GoalHeader, GoalMain } from './Goals.js'
 import { SummaryHeader, SummaryMain } from './Summary.js';
 import { SleepHeader, SleepMain } from './Sleep.js';
 import { CheckinHeader, CheckinMain } from './Checkin.js';
+
 function App(props) {
   const [currentGoals, setCurrentGoals] = useState(props.data);
 

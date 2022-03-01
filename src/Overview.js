@@ -6,7 +6,7 @@ export function OverviewHeader() {
       <div className="container">
         <h1>Welcome to WorkWell </h1>
         <p className="h5">A tool to help hold yourself accountable and build healthy habits in and around your busy lifestyle.</p>
-        <p className="lead">Complete your <a class="lead" href="check-in.html"> daily check-ins</a> to begin forming a
+        <p className="lead">Complete your <a className="lead" href="check-in.html"> daily check-ins</a> to begin forming a
           visualization based off your habits.</p>
         {/* <cite><a className="src"
             href="https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/"><br>Image
@@ -30,7 +30,7 @@ export function OverviewMain() {
       </div>
       <div className="sustainability-pledge">
         <img className="fit-picture" src="./img/heart.png" alt="minimalist leaf icon" />
-        <lead className="motto">WorkWell is a student led organization attributed to bettering human wellbeing.</lead>
+        <p className="motto">WorkWell is a student led organization attributed to bettering human wellbeing.</p>
         {/* <cite><a className="src"
             href="https://www.flaticon.com/premium-icon/heart_5451167?term=leaf%20heart&page=1&position=4&page=1&position=4&related_id=5451167&origin=search"><br>Image
             Source</br></a></cite> */}
