@@ -110,9 +110,6 @@ div > label, .form-check {
 .submit-btn {
   margin-top: 2rem;
 }
-.form-control {
-  max-width: 10vh;
-}
 
 /* date picker */
 .input-group {
