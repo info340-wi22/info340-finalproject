@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './Navigation.js';
 import { OverviewHeader, OverviewMain } from './Overview.js';
 import { GoalHeader, GoalMain } from './Goals.js'
+import { GoalDetail } from './GoalDetail.js'
 import { SummaryHeader, SummaryMain } from './Summary.js';
 import { SleepHeader, SleepMain } from './Sleep.js';
 import { CheckinHeader, CheckinMain } from './Checkin.js';
@@ -36,7 +37,9 @@ function App(props) {
       </header>
       <Routes>
         <Route path='/' element={<OverviewMain />} />
-        <Route path='/goals' element={<GoalMain goals={currentGoals} adoptCallback={handleCurrentGoals} />} />
+        <Route path='/goals' element={<GoalMain goals={currentGoals} adoptCallback={handleCurrentGoals} />} >
+          <Route path=':goalDetail' element={<GoalDetail goals={currentGoals}/>} />
+        </Route>
         <Route path='/check-in' element={<CheckinMain />} />
         <Route path='/missed-check-in' element={<MissedCheckinMain />} />
         <Route path='/summary' element={<SummaryMain />} />

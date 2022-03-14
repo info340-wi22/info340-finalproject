@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { getDatabase, ref, set as firebaseSet, push as firebasePush, onValue } from 'firebase/database';
 // Our apps interactivity for the REACT draft can be found below
@@ -35,6 +36,7 @@ function DailyGoalCard(props) {
             <div className="goal-content">
                 <h3 className="goal-title">{props.goal.title}</h3>
                 <p className="card-text">{props.goal.desc} </p>
+                <Link to={"/goals/"+props.goal.title} className="btn"> More Info </Link>
                 <b>{status ? 'COMPLETED' : 'INCOMPLETE'}</b>
                 <div className="button">
                     <button className="yesno-btn" type="button" onClick={handleYes}>YES</button>
