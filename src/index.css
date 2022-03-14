@@ -230,6 +230,12 @@ td, th {
   padding-bottom: 1rem;
 }
 
+/* styling for chartjs */
+.chartjs {
+  width:75%;
+}
+
+
 /* styling changes as screen size changes based off rules defined below */
 @media (min-width: 576px) {
   /* set jumbotron background image/removed margin */
