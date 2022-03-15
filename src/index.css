@@ -259,6 +259,8 @@ td, th {
 }
 
 .navbar-mobile {
+  padding-left: 35vh;
+  padding-right: 35vh;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;

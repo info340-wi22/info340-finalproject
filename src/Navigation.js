@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export function Header() {
   return (
-      <nav className="navbar navbar-expand justify-content-center ">
+      <nav className="navbar navbar-expand justify-content-center">
         <ul className="navbar-nav justify-content-center navbar-mobile">
           <li className="nav-item ">
             <NavLink className="nav-link" to='/'>Overview</NavLink>
