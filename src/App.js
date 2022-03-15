@@ -9,6 +9,7 @@ import { SummaryHeader, SummaryMain } from './Summary.js';
 import { SleepHeader, SleepMain } from './Sleep.js';
 import { CheckinHeader, CheckinMain } from './Checkin.js';
 import { MissedCheckinHeader, MissedCheckinMain } from './MissedCheckin.js';
+import { Fourohfour } from './404.js';
 function App(props) {
   const [currentGoals, setCurrentGoals] = useState(props.data);
 
@@ -28,6 +29,7 @@ function App(props) {
         <Header />
         <Routes>
           <Route path='/' element={<OverviewHeader />} />
+          <Route path='*' element={<Fourohfour />} />
           <Route path='/goals' element={<GoalHeader />} />
           <Route path='/check-in' element={<CheckinHeader />} />
           <Route path='/missed-check-in' element={<MissedCheckinHeader />} />
