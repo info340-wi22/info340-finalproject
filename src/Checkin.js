@@ -19,7 +19,7 @@ export function CheckinMain() {
         <main>
             <form>
                 <div className="form-group">
-                    <label for="WorkoutSelect">How many hours did you workout today?</label>
+                    <label htmlFor="WorkoutSelect">How many hours did you workout today?</label>
                     <select className="form-control form-width" id="WorkoutSelect">
                         <option>1</option>
                         <option>2</option>
@@ -36,7 +36,7 @@ export function CheckinMain() {
                     </select>
                 </div>
                 <div className="form-group">
-                    <label for="HappinessSelect">What would you rate your level of happiness and satisfaction at today?
+                    <label htmlFor="HappinessSelect">What would you rate your level of happiness and satisfaction at today?
                         <br />(zero being the worst, and ten as the best)</label>
                     <select className="form-control form-width" id="HappinessSelect">
                         <option>1</option>
@@ -54,7 +54,7 @@ export function CheckinMain() {
                 <button type="submit" className="submit-btn btn btn-primary">Submit</button>
                 <br />
             </form>
-            <a className="missed-day-link" href='/missed-check-in'><Link to='/missed-check-in'>Missed a day?</Link></a>
+            <Link className="missed-day-link" to='/missed-check-in'>Missed a day?</Link>
             <p></p>
         </main>
     );

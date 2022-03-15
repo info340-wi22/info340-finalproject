@@ -38,7 +38,7 @@ function App(props) {
       <Routes>
         <Route path='/' element={<OverviewMain />} />
         <Route path='/goals' element={<GoalMain goals={currentGoals} adoptCallback={handleCurrentGoals} />} >
-          <Route path=':goalDetail' element={<GoalDetail goals={currentGoals}/>} />
+          <Route path=':goalDetail' element={<GoalDetail goals={currentGoals} />} />
         </Route>
         <Route path='/check-in' element={<CheckinMain />} />
         <Route path='/missed-check-in' element={<MissedCheckinMain />} />

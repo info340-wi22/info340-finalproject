@@ -8,7 +8,7 @@ export function SummaryHeader() {
       <div className="container">
         <h1>Welcome!</h1>
         <p className="h5">Want to know how you've been doing?</p>
-            <p className="lead">Take a look at your summary for this week below.</p>
+        <p className="lead">Take a look at your summary for this week below.</p>
       </div>
     </div>
   );
@@ -22,13 +22,12 @@ export function SummaryMain() {
         <div className="row">
           <div className="column">
             <div className="card">
-                <a className="card-link" href='/sleep'><Link to='/sleep'>
-                  <h3>Sleep</h3>
-                  <p>Today you had <b>8 hours</b> of sleep.</p>
-                  <p>For the average person, it is recommended to sleep <b>7-9 hours</b>.
-                   </p>
-                  <p><em className="click-here">Click me to view your sleep record.</em></p></Link>
-                </a>
+              <Link className="card-link" to='/sleep'>
+                <h3>Sleep</h3>
+                <p>Today you had <b>8 hours</b> of sleep.</p>
+                <p>For the average person, it is recommended to sleep <b>7-9 hours</b>.
+                </p>
+                <p><em className="click-here">Click me to view your sleep record.</em></p></Link>
             </div>
           </div>
 
@@ -38,7 +37,7 @@ export function SummaryMain() {
               <p>Today you did <b>1 hour</b> of physical activity.</p>
               <p>It is recommended for everyone to include at least <b>30 minutes</b> of vigorous
                 aerobic activity to build muscle and improve/maintain cardiovascular wellbeing.
-                
+
               </p>
             </div>
           </div>
@@ -54,9 +53,9 @@ export function SummaryMain() {
       </section>
       <section>
         <h2 className="row justify-content-center">Weekly Summary</h2>
-        <a href='/'><Link to='/' /><img className="viz" src="./img/graph.png" alt="template visualization with empty charts." /></a>
+        <Link to='/' /><img className="viz" src="./img/graph.png" alt="template visualization with empty charts." />
         <cite><a className="src" href="https://pixabay.com/vectors/gui-interface-internet-program-2311261/">Image
-            Source</a></cite>
+          Source</a></cite>
       </section>
     </main>
   );

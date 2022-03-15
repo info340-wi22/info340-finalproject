@@ -16,7 +16,7 @@ a {
 }
 
 /* sets mains bg color to a blueish gray and fonts to white, and set bottom border of main to fit accent */
-main{
+main {
   background-color: #2d323f;
   border-bottom: 2px solid white;
 }
@@ -81,7 +81,7 @@ form {
   margin-right: 1.5rem;
 }
 
-div > label, .form-check {
+div>label, .form-check {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -197,6 +197,7 @@ div > label, .form-check {
   display: flex;
   justify-content: space-between;
 }
+
 /* table styling */
 table {
   border-collapse: collapse;
@@ -215,12 +216,12 @@ td, th {
 
 /* click-here prompt styling */
 .click-here {
-    font-size: 12px;
-    color: #ffffff;
-    text-shadow: -1px 1px 0 #566177,
-        1px 1px 0 #566177,
-       1px -1px 0 #566177,
-      -1px -1px 0 #566177;
+  font-size: 12px;
+  color: #ffffff;
+  text-shadow: -1px 1px 0 #566177,
+    1px 1px 0 #566177,
+    1px -1px 0 #566177,
+    -1px -1px 0 #566177;
 }
 
 .sustainability-pledge {
@@ -236,7 +237,7 @@ td, th {
 
 /* styling for chartjs */
 .chartjs {
-  width:75%;
+  width: 75%;
 }
 
 /* goals styling */
@@ -259,30 +260,34 @@ td, th {
 
 /* styling changes as screen size changes based off rules defined below */
 @media (min-width: 576px) {
+
   /* set jumbotron background image/removed margin */
   .jumbo-bg {
-      background-image: url('../public/img/triangle-bg.png');
-      /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
-      background-position: center;
-      background-size: cover;
-      width: 100%;
+    background-image: url('../public/img/triangle-bg.png');
+    /* image source: https://pixabay.com/illustrations/triangles-shapes-the-geometry-of-the-3322776/ */
+    background-position: center;
+    background-size: cover;
+    width: 100%;
   }
 
 }
 
 @media (min-width: 768px) {
-  .sustainability-pledge{
-      display: block;
+  .sustainability-pledge {
+    display: block;
   }
+
   .motto {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
+
   .fit-picture {
-      height: 12vh;
-      float: fixed;
-      left: 0px;
-      bottom: 20px;
+    height: 12vh;
+    float: fixed;
+    left: 0px;
+    bottom: 20px;
   }
+
   .mini-viz {
     display: flex;
   }
@@ -290,8 +295,9 @@ td, th {
 
 @media (min-width: 992px) {
   .viz {
-      height: 50vh;
+    height: 50vh;
   }
+
   .mobile-viz {
     display: flex;
   }
@@ -299,10 +305,10 @@ td, th {
 
 @media (min-width: 1200px) {
   .motto {
-      font-size: 1rem;
+    font-size: 1rem;
   }
+
   .fit-picture {
-      height: 15vh;
+    height: 15vh;
   }
 }
-

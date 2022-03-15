@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
-import { getDatabase, ref, push as firebasePush, onValue, remove } from 'firebase/database';
+import { getDatabase, ref, push as firebasePush, onValue } from 'firebase/database';
 // Our apps interactivity for the REACT draft can be found below
 export function GoalHeader() {
     return (
@@ -36,10 +36,10 @@ function DailyGoalCard(props) {
             <div className="goal-content">
                 <h3 className="goal-title mini-viz">{props.goal.title}</h3>
                 <p className="card-text">{props.goal.desc} </p>
-               
+
                 <Link to={`/goals/${props.goal.title}`} className="btn mobile-viz"> More Info </Link>
                 <b className='mobile-viz'>{status ? 'COMPLETED' : 'INCOMPLETE'}</b>
-               
+
                 <div className="button">
                     <button className="yesno-btn" type="button" onClick={handleYes}>YES</button>
                     <button className="yesno-btn" type="button" onClick={handleNo}>NO</button>
@@ -115,7 +115,7 @@ export function GoalMain(props) {
             offFunction();
         }
         return cleanup;
-    }, )
+    })
 
     const handleSubmit = (event) => {
         const allDescRef = ref(db, "allDesc");

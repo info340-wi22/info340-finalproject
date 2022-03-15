@@ -26,7 +26,7 @@ export function MissedCheckinMain() {
 
                 <div className="form-group">
                     <label htmlFor="WorkoutLabel">How many hours did you workout today?</label>
-                    <select className="form-control" id="WorkoutSelect">
+                    <select className="form-control form-width" id="WorkoutSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -44,7 +44,7 @@ export function MissedCheckinMain() {
                 <div className="form-group">
                     <label htmlFor="HappinessLabel">What would you rate your level of happiness and satisfaction at today?
                         <br />(zero being the worst, and ten as the best)</label>
-                    <select className="form-control" id="HappinessSelect">
+                    <select className="form-control form-width" id="HappinessSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
