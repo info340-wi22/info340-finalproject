@@ -51,9 +51,6 @@ export function OverviewMain() {
   return (
     <main>
       <section>
-        {/* <img className="viz" src="./img/graph.png" alt="template visualization with empty charts." />
-        <cite><a className="src" href="https://pixabay.com/vectors/gui-interface-internet-program-2311261/">Image
-            Source</a></cite> */}
         <div className="d-flex justify-content-center align-content-center">
           <a className="btn btn-primary" href='/check-in'><Link to='/check-in'> Daily Check-in </Link></a>
         </div>

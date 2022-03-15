@@ -53,7 +53,9 @@ export function SummaryMain() {
       </section>
       <section>
         <h2 className="row justify-content-center">Weekly Summary</h2>
-        <img className="viz" src="./img/graph.png" alt="sample viz" />
+        <a href='/'><Link to='/' /><img className="viz" src="./img/graph.png" alt="template visualization with empty charts." /></a>
+        <cite><a className="src" href="https://pixabay.com/vectors/gui-interface-internet-program-2311261/">Image
+            Source</a></cite>
       </section>
     </main>
   );

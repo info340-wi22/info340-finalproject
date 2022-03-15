@@ -157,6 +157,10 @@ div > label, .form-check {
   margin-right: auto;
 }
 
+.viz:hover {
+  opacity: 0.5;
+}
+
 .check-in-button {
   background-color: #4CAF50;
   color: white;
