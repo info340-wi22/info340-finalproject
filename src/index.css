@@ -239,9 +239,22 @@ td, th {
   width:75%;
 }
 
-/* new goal input styling */
+/* goals styling */
 .goal-input {
   width: auto;
+}
+
+.mobile-viz {
+  display: none;
+}
+
+.mini-viz {
+  display: none;
+}
+
+/* checkin form stying */
+.form-width {
+  width: 10vh;
 }
 
 /* styling changes as screen size changes based off rules defined below */
@@ -254,28 +267,33 @@ td, th {
       background-size: cover;
       width: 100%;
   }
+
 }
 
 @media (min-width: 768px) {
   .sustainability-pledge{
       display: block;
   }
-
   .motto {
       font-size: 0.8rem;
   }
-
   .fit-picture {
       height: 12vh;
       float: fixed;
       left: 0px;
       bottom: 20px;
   }
+  .mini-viz {
+    display: flex;
+  }
 }
 
 @media (min-width: 992px) {
   .viz {
       height: 50vh;
+  }
+  .mobile-viz {
+    display: flex;
   }
 }
 

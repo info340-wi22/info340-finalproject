@@ -34,10 +34,12 @@ function DailyGoalCard(props) {
                 <span className="material-icons-outlined">{props.goal.type}</span>
             </div>
             <div className="goal-content">
-                <h3 className="goal-title">{props.goal.title}</h3>
+                <h3 className="goal-title mini-viz">{props.goal.title}</h3>
                 <p className="card-text">{props.goal.desc} </p>
-                <Link to={`/goals/${props.goal.title}`} className="btn"> More Info </Link>
-                <b>{status ? 'COMPLETED' : 'INCOMPLETE'}</b>
+               
+                <Link to={`/goals/${props.goal.title}`} className="btn mobile-viz"> More Info </Link>
+                <b className='mobile-viz'>{status ? 'COMPLETED' : 'INCOMPLETE'}</b>
+               
                 <div className="button">
                     <button className="yesno-btn" type="button" onClick={handleYes}>YES</button>
                     <button className="yesno-btn" type="button" onClick={handleNo}>NO</button>
