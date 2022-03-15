@@ -54,7 +54,7 @@ export function OverviewMain() {
         <div className="d-flex justify-content-center align-content-center">
           <Link className="btn btn-primary" to='/check-in'> Daily Check-in </Link>
         </div>
-        <div className='row align-content-center justify-content-center'>Weekly Overview</div>
+        <div className='row align-content-center justify-content-center'>Overview</div>
         <div className='row align-content-center justify-content-center'><OverviewChart chartData={happinessData} options={chartOptions} /></div>
 
       </section>
