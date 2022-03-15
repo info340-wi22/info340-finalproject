@@ -29,7 +29,7 @@ function App(props) {
         <Header />
         <Routes>
           <Route path='/' element={<OverviewHeader />} />
-          <Route path='*' element={<Fourohfour />} />
+          
           <Route path='/goals' element={<GoalHeader />} />
           <Route path='/check-in' element={<CheckinHeader />} />
           <Route path='/missed-check-in' element={<MissedCheckinHeader />} />
@@ -39,6 +39,7 @@ function App(props) {
       </header>
       <Routes>
         <Route path='/' element={<OverviewMain />} />
+        <Route path='*' element={<Fourohfour />} />
         <Route path='/goals' element={<GoalMain goals={currentGoals} adoptCallback={handleCurrentGoals} />} >
           <Route path=':goalDetail' element={<GoalDetail goals={currentGoals} />} />
         </Route>
