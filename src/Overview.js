@@ -2,8 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Bar } from 'react-chartjs-2';
-import { CheckinData } from './Data'
-import { Chart as ChartJS } from 'chart.js/auto'
+import { CheckinData } from './Data';
+import { Chart as ChartJS } from 'chart.js/auto';
 
 export function OverviewHeader() {
   return (

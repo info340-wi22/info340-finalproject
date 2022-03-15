@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CheckinData } from './Data'
 
 export function SleepHeader() {
   return (
@@ -13,6 +14,8 @@ export function SleepHeader() {
 }
 
 export function SleepMain() {
+  const dates = CheckinData.map((data) => data.date);
+  const hoursSlept = CheckinData.map((data) => data.hoursSlept);
   return (
     <main>
       <h2>On average you slept 7.5 hours.</h2>
@@ -22,16 +25,16 @@ export function SleepMain() {
           <th>Hours slept</th>
         </tr>
         <tr>
-          <td>1 Feb 2022</td>
-          <td>8 hours</td>
+          <td>{dates[0]}</td>
+          <td>{hoursSlept[0]}</td>
         </tr>
         <tr>
-          <td>2 Feb 2022</td>
-          <td>7 hours</td>
+          <td>{dates[1]}</td>
+          <td>{hoursSlept[1]}</td>
         </tr>
         <tr>
-          <td>3 Feb 2022</td>
-          <td>7.5 hours</td>
+          <td>{dates[2]}</td>
+          <td>{hoursSlept[2]}</td>
         </tr>
       </table>
       <a className="missed-day-link click-here row justify-content-center" href='/summary'><Link to='/summary'>Want to go back? Click me.</Link></a>
