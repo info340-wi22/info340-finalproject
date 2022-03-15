@@ -235,6 +235,10 @@ td, th {
   width:75%;
 }
 
+/* new goal input styling */
+.goal-input {
+  width: auto;
+}
 
 /* styling changes as screen size changes based off rules defined below */
 @media (min-width: 576px) {

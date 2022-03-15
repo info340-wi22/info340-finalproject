@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function SleepHeader() {
   return (
@@ -33,7 +34,7 @@ export function SleepMain() {
           <td>7.5 hours</td>
         </tr>
       </table>
-      <a className="missed-day-link click-here row justify-content-center" href="/summary">Want to go back? Click me.</a>
+      <a className="missed-day-link click-here row justify-content-center" href='/summary'><Link to='/summary'>Want to go back? Click me.</Link></a>
     </main>
   );
 }

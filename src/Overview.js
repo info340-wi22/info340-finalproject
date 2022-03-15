@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Bar } from 'react-chartjs-2';
 import { CheckinData } from './Data'
 import { Chart as ChartJS } from 'chart.js/auto'
@@ -40,14 +41,6 @@ export function OverviewMain() {
   });
 
   const chartOptions = {
-    scales: {
-      xAxes: [{
-        stacked: true
-      }],
-      yAxes: [{
-        stacked: true
-      }]
-    },
     plugins: {
       legend: {
         display: true
@@ -62,7 +55,7 @@ export function OverviewMain() {
         <cite><a className="src" href="https://pixabay.com/vectors/gui-interface-internet-program-2311261/">Image
             Source</a></cite> */}
         <div className="d-flex justify-content-center align-content-center">
-          <a className="btn btn-primary" href="/check-in"> Daily Check-in </a>
+          <a className="btn btn-primary" href='/check-in'><Link to='/check-in'> Daily Check-in </Link></a>
         </div>
         <div className='row align-content-center justify-content-center'>Weekly Overview</div>
         <div className='row align-content-center justify-content-center'><OverviewChart chartData={happinessData} options={chartOptions} /></div>

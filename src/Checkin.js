@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function CheckinHeader() {
     return (
@@ -53,7 +54,7 @@ export function CheckinMain() {
                 <button type="submit" className="submit-btn btn btn-primary">Submit</button>
                 <br />
             </form>
-            <a className="missed-day-link" href="/missed-check-in">Missed a day?</a>
+            <a className="missed-day-link" href='/missed-check-in'><Link to='/missed-check-in'>Missed a day?</Link></a>
             <p></p>
         </main>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function SummaryHeader() {
   return (
@@ -20,12 +21,12 @@ export function SummaryMain() {
         <div className="row">
           <div className="column">
             <div className="card">
-                <a className="card-link" href="/sleep">
+                <a className="card-link" href='/sleep'><Link to='/sleep'>
                   <h3>Sleep</h3>
                   <p>Today you had <b>8 hours</b> of sleep.</p>
-                  <p>At your age of 20, it is recommended to sleep <b>7-9 hours</b>.
-                    Good Job! Today you've slept enough.</p>
-                  <p><em className="click-here">Click me to view your sleep record.</em></p>
+                  <p>For the average person, it is recommended to sleep <b>7-9 hours</b>.
+                   </p>
+                  <p><em className="click-here">Click me to view your sleep record.</em></p></Link>
                 </a>
             </div>
           </div>
@@ -35,8 +36,8 @@ export function SummaryMain() {
               <h3>Workout</h3>
               <p>Today you did <b>1 hour</b> of physical activity.</p>
               <p>It is recommended for everyone to include at least <b>30 minutes</b> of vigorous
-                aerobic activity that build strong muscles and bones daily.
-                Good Job! Today you've worked out enough.
+                aerobic activity to build muscle and improve/maintain cardiovascular wellbeing.
+                
               </p>
             </div>
           </div>
@@ -44,8 +45,8 @@ export function SummaryMain() {
           <div className="column">
             <div className="card">
               <h3>Satisfaction</h3>
-              <p>You are satisfied with your day.</p>
-              <p>You should be! Really good job today. Keep it up!</p>
+              <p>You should be feeling satisfied with your day.</p>
+              <p>Really good job today. Keep it up!</p>
             </div>
           </div>
         </div>

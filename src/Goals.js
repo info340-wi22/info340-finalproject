@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { getDatabase, ref, set as firebaseSet, push as firebasePush, onValue } from 'firebase/database';
+import { getDatabase, ref, push as firebasePush, onValue, remove } from 'firebase/database';
 // Our apps interactivity for the REACT draft can be found below
 export function GoalHeader() {
     return (
@@ -28,7 +28,7 @@ function DailyGoalCard(props) {
     }
 
     return (
-        <div className={status ? "goal-complete":"goal"}>
+        <div className={status ? "goal-complete" : "goal"}>
             <div className="goal-type">
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"></link>
                 <span className="material-icons-outlined">{props.goal.type}</span>
@@ -36,7 +36,7 @@ function DailyGoalCard(props) {
             <div className="goal-content">
                 <h3 className="goal-title">{props.goal.title}</h3>
                 <p className="card-text">{props.goal.desc} </p>
-                <Link to={"/goals/"+props.goal.title} className="btn"> More Info </Link>
+                <Link to={"/goals/" + props.goal.title} className="btn"> More Info </Link>
                 <b>{status ? 'COMPLETED' : 'INCOMPLETE'}</b>
                 <div className="button">
                     <button className="yesno-btn" type="button" onClick={handleYes}>YES</button>
@@ -49,6 +49,7 @@ function DailyGoalCard(props) {
 
 function NewGoalCard(props) {
     const [status, setStatus] = useState(false);
+    const [state, setState] = useState(true);
 
     const handleYes = (event) => {
         props.adoptCallback(props.goal.title);
@@ -59,14 +60,30 @@ function NewGoalCard(props) {
         setStatus(false);
     }
 
+    const handleDelete = (event) => {
+        setState(false);
+        // Does not work as intended, deletes all/throws error in db
+        const db = getDatabase();
+        const allDescRef = ref(db, "allDesc");
+        remove(allDescRef);
+        
+    }
+
+    if (state === false) {
+        return (
+            <div></div>
+        )
+    }
     return (
-        <div className={status ? "goal-complete":"goal"}>
+
+        <div className={status ? "goal-complete" : "goal"}>
             <div className="goal-content">
                 <p className="card-text">{props.goal} </p>
                 <b>{status ? 'COMPLETED' : 'INCOMPLETE'}</b>
                 <div className="button">
                     <button className="yesno-btn" type="button" onClick={handleYes}>YES</button>
                     <button className="yesno-btn" type="button" onClick={handleNo}>NO</button>
+                    <button className="yesno-btn" type="button" onClick={handleDelete}>DELETE</button>
                 </div>
             </div>
         </div>
@@ -89,7 +106,7 @@ export function GoalMain(props) {
             const allDescObject = snapshot.val();
             const descKeyArray = Object.keys(allDescObject);
             const allDescArray = descKeyArray.map((keyString) => {
-                const whichObject= allDescObject[keyString];
+                const whichObject = allDescObject[keyString];
                 return whichObject;
             })
             setGoalArray(allDescArray);
@@ -98,7 +115,7 @@ export function GoalMain(props) {
             offFunction();
         }
         return cleanup;
-    }, [])
+    }, )
 
     const handleSubmit = (event) => {
         const allDescRef = ref(db, "allDesc");
@@ -116,24 +133,28 @@ export function GoalMain(props) {
     })
 
     return (
-        <main>
-            <h2>Daily Goals</h2>
-            <div className='goal-container'>
-                {goalArrayObj}
-            </div>
+        <section>
+            <main>
+                <h2>Daily Goals</h2>
+                <div className='goal-container'>
+                    {goalArrayObj}
+                </div>
 
-            <h2>Personal Goals</h2>
-            <div>
-                {newGoalObj}
-            </div>
-            <div className="form">
-                <div className="form-group mb-1">
-                    <input type="text" id="task-input" className="form-control" placeholder="Add personal goals?" onChange={handleChange} value={userInput}/>
+                <h2>Personal Goals</h2>
+                <div>
+                    {newGoalObj}
                 </div>
-                <div className="form-group">
-                    <button type="button" id="add-task-button" className="btn btn-primary" onClick={handleSubmit}>Add goal to list</button>
+                <div className="row p-2">
+                    <div className="form">
+                        <div className="form-group mb-1">
+                            <input type="text" id="task-input" className="goal-input form-control" placeholder="Add a personal goal here." onChange={handleChange} value={userInput} />
+                        </div>
+                        <div className="form-group">
+                            <button type="button" id="add-task-button" className="btn btn-primary" onClick={handleSubmit}>Add goal to list</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </section>
     )
 }
