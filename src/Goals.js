@@ -120,7 +120,7 @@ export function GoalMain(props) {
     const handleSubmit = (event) => {
         const allDescRef = ref(db, "allDesc");
         firebasePush(allDescRef, userInput)
-            .then(() => {console.log("pushed")})
+            .then(() => console.log("pushed"))
             .catch((err) => console.log(err));
         setUserInput("");
     }
