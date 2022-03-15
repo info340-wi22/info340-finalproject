@@ -6,12 +6,10 @@ export function GoalDetail(props) {
 
 
   const goalDetail = Object.values(useParams());
-  console.log(goalDetail);
   < Outlet />
   const goalArray = props.goals;
 
   let goal = _.find(goalArray, { name: goalDetail });
-  console.log(goal);
 
 
   return (

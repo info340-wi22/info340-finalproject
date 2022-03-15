@@ -51,7 +51,6 @@ function DailyGoalCard(props) {
 
 function NewGoalCard(props) {
     const [status, setStatus] = useState(false);
-    // const [state, setState] = useState(true);
 
     const handleYes = (event) => {
         props.adoptCallback(props.goal.title);
@@ -62,18 +61,6 @@ function NewGoalCard(props) {
         setStatus(false);
     }
 
-    // const handleDelete = (event) => {
-    //     setState(false);
-    //     const db = getDatabase();
-    //     const allDescRef = ref(db, "allDesc");
-    //     remove(allDescRef);
-    // }
-
-    // if (state === false) {
-    //     return (
-    //         <div></div>
-    //     )
-    // }
     return (
 
         <div className={status ? "goal-complete" : "goal"}>
@@ -83,7 +70,6 @@ function NewGoalCard(props) {
                 <div className="button">
                     <button className="yesno-btn" type="button" onClick={handleYes}>YES</button>
                     <button className="yesno-btn" type="button" onClick={handleNo}>NO</button>
-                    {/* <button className="yesno-btn" type="button" onClick={handleDelete}>DELETE</button> */}
                 </div>
             </div>
         </div>

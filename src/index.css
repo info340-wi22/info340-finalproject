@@ -99,6 +99,7 @@ div>label, .form-check {
   background-color: black;
   border-color: white;
   margin-bottom: 1.5rem;
+  color: white;
 }
 
 .yesno-btn {
