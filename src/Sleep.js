@@ -18,7 +18,7 @@ export function SleepMain() {
   const hoursSlept = CheckinData.map((data) => data.hoursSlept);
   return (
     <main>
-      <h2>On average you slept 7.5 hours.</h2>
+      <h2>On average you slept {((hoursSlept[0] + hoursSlept[1] + hoursSlept[2] + hoursSlept[3] + hoursSlept[4] + hoursSlept[5] + hoursSlept[6])/7).toPrecision(3)} hours.</h2>
       <table>
         <tbody>
           <tr>
@@ -36,6 +36,22 @@ export function SleepMain() {
           <tr>
             <td>{dates[2]}</td>
             <td>{hoursSlept[2]}</td>
+          </tr>
+          <tr>
+            <td>{dates[3]}</td>
+            <td>{hoursSlept[3]}</td>
+          </tr>
+          <tr>
+            <td>{dates[4]}</td>
+            <td>{hoursSlept[4]}</td>
+          </tr>
+          <tr>
+            <td>{dates[5]}</td>
+            <td>{hoursSlept[5]}</td>
+          </tr>
+          <tr>
+            <td>{dates[6]}</td>
+            <td>{hoursSlept[6]}</td>
           </tr>
         </tbody>
       </table>
