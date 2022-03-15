@@ -64,7 +64,7 @@ function NewGoalCard(props) {
     //     setState(false);
     //     const db = getDatabase();
     //     const allDescRef = ref(db, "allDesc");
-    //     remove(allDescRef); 
+    //     remove(allDescRef);
     // }
 
     // if (state === false) {
@@ -117,7 +117,9 @@ export function GoalMain(props) {
 
     const handleSubmit = (event) => {
         const allDescRef = ref(db, "allDesc");
-        firebasePush(allDescRef, userInput);
+        firebasePush(allDescRef, userInput)
+            .then(() => {console.log("pushed")})
+            .catch((err) => console.log(err));
         setUserInput("");
     }
 
